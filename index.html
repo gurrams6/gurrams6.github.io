@@ -5,77 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sai Kumar Gurram - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #f0f4f8, #e6f7ff);
-    }
-
-    #visitBanner {
-      text-align: center;
-      background: #d1ecf1;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    .sidebar {
-      width: 250px;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: #212529;
-      color: white;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    }
-
-    .sidebar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: block;
-      margin: auto;
-      margin-bottom: 15px;
-      border: 3px solid #ffc107;
-    }
-
-    .sidebar h4 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 10px 0;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background 0.2s ease;
-    }
-
-    .sidebar a:hover,
-    .sidebar a.active {
-      background-color: #ffc107;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8ff, #fce4ec);
+      background-attachment: fixed;
+      background-size: cover;
       color: #212529;
     }
 
+    .section-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #007bff;
+    }
+
+    .profile-card h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .sidebar-text {
+      color: #6c757d;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar {
+      background: #ffffff;
+      height: 100vh;
+      padding: 30px 15px;
+    }
+
+    .sidebar .btn {
+      background-color: #007bff;
+      color: white;
+      border-radius: 25px;
+    }
+
     .main-content {
-      margin-left: 270px;
+      background: #f9fbfd;
       padding: 30px;
     }
 
     .analog-clock {
       position: relative;
-      width: 120px;
-      height: 120px;
-      border: 4px solid #ffc107;
+      width: 100px;
+      height: 100px;
+      border: 4px solid #007bff;
       border-radius: 50%;
-      margin: 20px auto;
-      background: white;
+      margin: 10px auto;
+      background-color: white;
     }
 
     .hand {
@@ -85,227 +85,192 @@
       transform-origin: bottom center;
     }
 
-    .hour {
-      width: 4px;
-      height: 30px;
-      background: #343a40;
-    }
-
-    .minute {
-      width: 3px;
-      height: 45px;
-      background: #343a40;
-    }
-
-    .second {
-      width: 2px;
-      height: 55px;
-      background: red;
-    }
-
-    .section {
-      margin-top: 40px;
-    }
-
-    .bottom-section {
-      text-align: center;
-      margin-top: 50px;
-    }
+    .hour { width: 4px; height: 30px; background: #343a40; }
+    .minute { width: 3px; height: 40px; background: #343a40; }
+    .second { width: 2px; height: 50px; background: red; }
 
     .btn-waph {
-      margin-top: 20px;
-      background-color: #007bff;
+      background: #28a745;
       color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
+      margin-top: 20px;
     }
 
-    .btn-waph:hover {
-      background-color: #0056b3;
+    .visit-banner {
+      background: #d1ecf1;
+      color: #0c5460;
+      text-align: center;
+      padding: 10px;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
-<div id="visitBanner"></div>
+<div class="visit-banner" id="visitBanner"></div>
 
-<div class="sidebar">
-  <img src="images/headshot.png" alt="Sai Kumar">
-  <h4>Sai Kumar Gurram</h4>
-  <a class="active" href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#api">API Calls</a>
-</div>
-
-<div class="main-content">
-  <section id="about">
-    <h2>About Me</h2>
-    <p><strong>Sai Kumar Gurram</strong><br>MS in Computer Science – University of Dayton</p>
-    <p><span id="email">saikumar@email.com</span> <a href="#" id="toggleEmail">(Hide Email)</a></p>
-    <div class="card bg-info text-white mb-3">
-  <div class="card-header">Live Weather</div>
-  <div class="card-body" id="weatherAPI">Loading weather...</div>
-</div>
-    <div id="time" class="mb-2"></div>
-    <div class="analog-clock" id="analog">
-      <div class="hand hour" id="hour"></div>
-      <div class="hand minute" id="minute"></div>
-      <div class="hand second" id="second"></div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3 sidebar">
+      <div class="profile-card">
+        <img src="images/headshot.png" alt="Sai Kumar Gurram">
+        <h3>Sai Kumar Gurram</h3>
+        <p class="sidebar-text">MS in Computer Science<br>University of Dayton</p>
+        <p class="sidebar-text">361 E Stewart St Apt 3D, Dayton, OH</p>
+        <p class="sidebar-text"><span id="email">saikumar@email.com</span> <a href="#" id="toggleEmail">(Hide)</a></p>
+        <div id="analog" class="analog-clock">
+          <div class="hand hour" id="hour"></div>
+          <div class="hand minute" id="minute"></div>
+          <div class="hand second" id="second"></div>
+        </div>
+        <a href="images/Sai Kumar.docx" class="btn mt-3">Download Resume</a>
+      </div>
     </div>
-  </section>
 
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <p><strong>MS in Computer Science</strong><br>University of Dayton, Expected 2026</p>
-    <p><strong>BTech in CSE</strong><br>Princeton Institute of Engineering and Technology</p>
-  </section>
+    <!-- Main Content -->
+    <div class="col-md-9 main-content">
+      <section id="about">
+        <div class="section-card">
+          <h2>About Me</h2>
+          <p>Highly driven computer science engineer passionate about AI ethics and developing transparent AI solutions. Proficient in Python, web development, and AI bias research. Seeking opportunities in data-driven innovations.</p>
+          <div id="time" class="mb-3 fw-bold"></div>
+        </div>
 
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <p><strong>Virtusa</strong> – Intern, Jan 2023 to Dec 2024</p>
-  </section>
+        <div class="card mb-4" style="background: linear-gradient(135deg, #74ebd5, #9face6); color: #000; border-radius: 12px;">
+          <div class="card-header fw-bold border-0" style="background: transparent;">Live Weather</div>
+          <div class="card-body" id="weatherAPI">Loading weather...</div>
+        </div>
+      </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li>Programmer’s Calculator</li>
-      <li>Smart Agri-Commerce Web Application</li>
-      <li>Student Result Management System</li>
-    </ul>
-  </section>
+      <section id="education" class="section">
+        <div class="section-card">
+          <h2>Education</h2>
+          <p><strong>MS in Computer Science Engineering</strong><br>University of Dayton, Expected Dec 2026</p>
+          <p><strong>B.Tech in Computer Science Engineering</strong><br>Swarma Bharathi Institute of Science and Technology, June 2024</p>
+        </div>
+      </section>
 
-  <section id="skills" class="section">
+      <section id="experience" class="section">
+        <div class="section-card">
+          <h2>Experience</h2>
+          <p><strong>Data Analyst Intern</strong><br>Attivo Company, Jun 2024 – Sep 2024<br>Worked on web frameworks, data generation, and network performance insights.</p>
+          <p><strong>Webpage Development Intern</strong><br>Amazon, Jan 2024 – May 2024<br>Developed dashboard and user interface enhancements.</p>
+        </div>
+      </section>
+      <section id="skills" class="section">
+  <div class="section-card">
     <h2>Skills</h2>
-    <p><strong>Languages:</strong> Java, Python, C++, HTML, JavaScript</p>
-    <p><strong>Tools:</strong> GitHub, Bootstrap, MySQL</p>
-  </section>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, Java, C</li>
+      <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, PHP</li>
+      <li><strong>Frameworks & Tools:</strong> Bootstrap, Node.js, React, Git</li>
+      <li><strong>Databases:</strong> MySQL, MongoDB</li>
+      <li><strong>Others:</strong> AI Bias Mitigation, Data Analysis, REST APIs, Agile Methodology</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="api" class="section">
-    <h2>API Calls</h2>
-    <p><em>Disclaimer:</em> This content is pulled from public APIs.</p>
 
-    <div class="card bg-warning text-white mb-3">
-      <div class="card-header">Joke of the Moment</div>
-      <div class="card-body" id="jokeAPI">Loading joke...</div>
+      <section id="projects" class="section">
+        <div class="section-card">
+          <h2>Projects</h2>
+          <ul>
+            <li>Self-learning and Health Status Analysis – Error detection and recovery analysis system.</li>
+            <li>Criminal Detection – Face recognition-based criminal identification system.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="api" class="section">
+        <h2>API Calls</h2>
+        <div class="card mb-4" style="background: linear-gradient(135deg, #fceabb, #f8b500); color: #000; border-radius: 12px;">
+          <div class="card-header fw-bold border-0">Joke of the Moment</div>
+          <div class="card-body" id="jokeAPI">Loading...</div>
+        </div>
+
+        <div class="card mb-4" style="background: linear-gradient(135deg, #a1ffce, #faffd1); color: #000; border-radius: 12px;">
+          <div class="card-header fw-bold border-0">Advice of the Moment</div>
+          <div class="card-body" id="adviceAPI">Loading...</div>
+        </div>
+
+        <div class="text-center">
+          <a href="waph.html" class="btn btn-waph">Go to WAPH Page</a>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://info.flagcounter.com/XVRC">
+            <img src="https://s01.flagcounter.com/count2/XVRC/bg_FF4D17/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+          </a>
+        </div>
+      </section>
     </div>
-
-    <div class="card bg-success text-white mb-3">
-      <div class="card-header">Advice of the Moment</div>
-      <div class="card-body" id="adviceAPI">Loading advice...</div>
-    </div>
-
-    <div class="text-center">
-      <a href="waph.html" class="btn btn-waph">Go to WAPH Page</a>
-    </div>
-
-    <div class="bottom-section mt-4">
-      <a href="https://info.flagcounter.com/XVRC">
-        <img src="https://s01.flagcounter.com/count2/XVRC/bg_FF4D17/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-      </a>
-    </div>
-  </section>
+  </div>
 </div>
 
 <script>
-function loadWeather() {
-  if (!navigator.geolocation) {
-    document.getElementById("weatherAPI").textContent = "Geolocation not supported by your browser.";
-    return;
-  }
-
-  navigator.geolocation.getCurrentPosition(success => {
-    const { latitude, longitude } = success.coords;
-
-    // Reverse geocoding to get location name
-    fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
-      .then(res => res.json())
-      .then(locationData => {
-        const locationName = locationData.address.city || locationData.address.town || locationData.address.village || "your area";
-
-        // Fetch weather info
-        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`)
-          .then(res => res.json())
-          .then(data => {
-            const weather = data.current_weather;
-            document.getElementById("weatherAPI").innerHTML = `
-              <strong>Location:</strong> ${locationName}<br>
-              <strong>Temperature:</strong> ${weather.temperature}°C<br>
-              <strong>Wind Speed:</strong> ${weather.windspeed} km/h<br>
-              <strong>Condition:</strong> ${weather.weathercode === 0 ? 'Clear' : 'Cloudy'}
-            `;
-          });
-      }).catch(() => {
-        document.getElementById("weatherAPI").textContent = "Unable to fetch weather data.";
-      });
-
-  }, () => {
-    document.getElementById("weatherAPI").textContent = "Permission denied to access location.";
-  });
-}
-
-loadWeather();
-
-
-  // Visit banner
+  // Visit Banner
   const lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   document.getElementById("visitBanner").textContent = lastVisit ?
     `Welcome back! Your last visit was ${decodeURIComponent(lastVisit)}` :
-    "Welcome to my homepage for the first time!";
+    "Welcome to my portfolio!";
   document.cookie = "lastVisit=" + encodeURIComponent(new Date().toLocaleString()) + "; path=/";
 
-  // Digital clock
+  // Clock
   setInterval(() => {
     const now = new Date();
     document.getElementById("time").textContent = now.toLocaleTimeString();
-  }, 1000);
-
-  // Analog clock
-  function updateAnalogClock() {
-    const now = new Date();
     document.getElementById('second').style.transform = `rotate(${now.getSeconds() * 6}deg)`;
     document.getElementById('minute').style.transform = `rotate(${now.getMinutes() * 6}deg)`;
     document.getElementById('hour').style.transform = `rotate(${((now.getHours() % 12) + now.getMinutes() / 60) * 30}deg)`;
-  }
-  setInterval(updateAnalogClock, 1000);
-  updateAnalogClock();
+  }, 1000);
 
-  // Toggle email
+  // Email toggle
   document.getElementById("toggleEmail").onclick = function () {
     const email = document.getElementById("email");
-    if (email.style.display === "none") {
-      email.style.display = "inline";
-      this.textContent = "(Hide Email)";
-    } else {
-      email.style.display = "none";
-      this.textContent = "(Show Email)";
-    }
+    email.style.display = email.style.display === "none" ? "inline" : "none";
+    this.textContent = email.style.display === "none" ? "(Show)" : "(Hide)";
     return false;
   };
 
-  // Joke API
+  // API functions
   function loadJoke() {
     fetch("https://v2.jokeapi.dev/joke/Any?type=single")
       .then(res => res.json())
-      .then(data => {
-        document.getElementById("jokeAPI").textContent = data.joke;
-      });
+      .then(data => { document.getElementById("jokeAPI").textContent = data.joke; });
   }
-  loadJoke();
-  setInterval(loadJoke, 60000);
 
-  // Advice API
   function loadAdvice() {
     fetch("https://api.adviceslip.com/advice")
       .then(res => res.json())
-      .then(data => {
-        document.getElementById("adviceAPI").textContent = data.slip.advice;
-      });
+      .then(data => { document.getElementById("adviceAPI").textContent = data.slip.advice; });
   }
+
+  function loadWeather() {
+    if (!navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(success => {
+      const { latitude, longitude } = success.coords;
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+        .then(res => res.json())
+        .then(loc => {
+          const place = loc.address.city || loc.address.town || loc.address.village || "your location";
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`)
+            .then(res => res.json())
+            .then(data => {
+              const weather = data.current_weather;
+              document.getElementById("weatherAPI").innerHTML = `
+                <strong>Location:</strong> ${place}<br>
+                <strong>Temperature:</strong> ${weather.temperature}°C<br>
+                <strong>Wind Speed:</strong> ${weather.windspeed} km/h<br>
+                <strong>Condition:</strong> ${weather.weathercode === 0 ? 'Clear' : 'Cloudy'}`;
+            });
+        });
+    });
+  }
+
+  loadJoke();
   loadAdvice();
+  loadWeather();
+  setInterval(loadJoke, 60000);
   setInterval(loadAdvice, 60000);
 </script>
 
