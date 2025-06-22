@@ -183,7 +183,7 @@
 
       <section id="api" class="section">
         <h2>API Calls</h2>
-       
+
 <div class="section-card" style="background: #fff3cd; color: #856404; font-size: 14px; border-left: 4px solid #ffeeba;">
   <strong>Disclaimer:</strong> The content below is fetched from public third-party APIs (e.g., JokeAPI, Advice Slip, Open-Meteo). We do not control or guarantee the accuracy, appropriateness, or availability of this external content. Viewer discretion is advised.
 </div>
@@ -198,6 +198,15 @@
           <div class="card-header fw-bold border-0">Advice of the Moment</div>
           <div class="card-body" id="adviceAPI">Loading...</div>
         </div>
+        
+<div class="card mb-4" style="background: linear-gradient(135deg, #d3cce3, #e9e4f0); color: #000; border-radius: 12px;">
+  <div class="card-header fw-bold border-0">Comic of the Moment</div>
+  <div class="card-body text-center" id="comicAPI">
+    <img id="comicImg" src="" alt="Comic of the moment" class="img-fluid mb-2" style="max-height: 300px;" />
+    <p id="comicTitle" class="text-muted" style="font-size: 14px;"></p>
+  </div>
+</div>
+
 
         <div class="text-center">
           <a href="waph.html" class="btn btn-waph">Go to WAPH Page</a>
@@ -272,6 +281,22 @@
         });
     });
   }
+  function loadComic() {
+  fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://xkcd.com/info.0.json"))
+    .then(res => res.json())
+    .then(data => {
+      const json = JSON.parse(data.contents);
+      document.getElementById("comicImg").src = json.img;
+      document.getElementById("comicTitle").textContent = json.title;
+    })
+    .catch(() => {
+      document.getElementById("comicAPI").textContent = "Unable to load comic at this time.";
+    });
+}
+
+
+// Call it
+loadComic();
 
   loadJoke();
   loadAdvice();
